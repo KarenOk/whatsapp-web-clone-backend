@@ -49,10 +49,4 @@ const sentences = [
 	"Her scream silenced the rowdy teenagers.",
 ];
 
-const getRandomSentence = () => {
-	const randomIndex = Math.floor(Math.random() * sentences.length);
-	const sentence = sentences[randomIndex];
-	return sentence;
-};
-
-module.exports = { getRandomSentence };
+module.exports = { sentences };
