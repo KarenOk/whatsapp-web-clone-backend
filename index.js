@@ -21,7 +21,10 @@ io.on("connection", (socket) => {
 
 			setTimeout(() => {
 				socket.emit("stop_typing", { userId });
-				socket.emit("fetch_response", { response: getRandomSentence() });
+				socket.emit("fetch_response", {
+					response: getRandomSentence(),
+					userId,
+				});
 			}, responseInterval);
 		}, 1500);
 	});
